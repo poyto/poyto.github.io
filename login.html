@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no ">
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RestoMenum Login</title>
+        <link href="style.css" rel=stylesheet />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+
+    <div class="login-page">
+
+
+
+        <div id="login-box" class="login-box">
+
+
+            <form action="/action_page.php" method="post">
+                <img class="logo" src="/images/logo-black.jpg">
+                <div class="container">
+                    <label for="uname"><span>Username:</span></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                    <label for="psw"><span>Password:</span></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit"><span>Login</span></button>
+
+                    <div class="other-button create">
+                        <a onclick="showDiv()">Create an Account</a>
+                    </div>
+
+                    <label class="bottom-line">
+                        <input type="checkbox" checked="checked" name="remember"><span>Remember me</span>
+                        <span class="psw"><a href="#">Forgot password?</a></span>
+                    </label>
+
+                </div>
+                
+
+
+                <div class="login-options">
+                    <div class="other-button"><a href="#"><i class="fas fa-envelope"></i>Login with e-mail</a></div>
+                    <div class="other-button"><a href="#"><i class="fab fa-google-plus"></i>Login with Google</a></div>
+                    <div class="other-button"><a href="#"><i class="fab fa-facebook-square"></i>Login with Facebook</a></div>
+                </div>
+
+            </form>
+              
+            
+        </div>
+
+        <div id="create-box" class="login-box" style="display:none;"  >
+            <form action="/action_page.php" method="post">
+                <div class="heading">
+                    <i onclick="showDiv2()" class="fas fa-chevron-left"></i>
+                    Create your account
+                </div>
+
+                <div class="container">
+                  <label for="uname"><span>Username:</span></label>
+                  <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                  <label for="email"><span>E-mail adress:</span></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="psw"><span>Password:</span></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                      
+                  <button type="submit"><span>Create Account</span></button>
+
+                </div>
+                
+
+
+                <div class="login-options">
+                    <div class="other-button"><a href="#"><i class="fas fa-envelope"></i>Sign Up with e-mail</a></div>
+                    <div class="other-button"><a href="#"><i class="fab fa-google-plus"></i>Sign Up with Google</a></div>
+                    <div class="other-button"><a href="#"><i class="fab fa-facebook-square"></i>Sign Up with Facebook</a></div>
+                </div>
+
+            </form>
+        
+        </div>
+    </div>
+
+
+    <script>
+
+        function showDiv() {
+            document.getElementById('create-box').style.display = "block";
+            document.getElementById('login-box').style.display = "none";       
+        }
+
+        function showDiv2() {
+            document.getElementById('login-box').style.display = "block";
+            document.getElementById('create-box').style.display = "none";       
+        }
+
+    </script>
+     
+</body>
+
+</html>
