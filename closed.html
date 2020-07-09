@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+		<meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no ">
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RestoMenum</title>
+        <link href="style.css" rel=stylesheet />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+    </head>
+
+
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidenav-title">
+            <img src="images/logo.png">
+            <span>SuperAdmin</span>
+        </div>
+        <div class="sidenav-cat">
+            <div class="sidenav-cat-title">MENU</div>
+                <a href="#"><img src="/images/icons/stars.png">Genel Görünüm</a>
+                <a href="#"><img src="/images/icons/stars.png">Kapanan Masalar</a>
+                <a href="#"><img src="/images/icons/stars.png">Hızlı Sipariş</a>
+                <a href="#"><img src="/images/icons/stars.png">Açık Masalar</a>
+                <a href="#"><img src="/images/icons/stars.png">Açık Hesaplar</a>
+                <a href="#"><img src="/images/icons/stars.png">Hazırlanacaklar</a>
+                <a href="#"><img src="/images/icons/stars.png">Teslim Edilecekler</a>
+                <a href="#"><img src="/images/icons/stars.png">Yazıcı Ayarları</a>
+                <a href="#"><img src="/images/icons/stars.png">Ayarlar</a>
+                <a href="#"><img src="/images/icons/stars.png">Genel Ayarlar</a>
+        </div>
+    </div>
+
+
+    <header>
+        <span style="font-size:30px;cursor:pointer;padding-left:10px;" onclick="openNav()">&#9776;</span>
+
+        <div class="logo">
+        <img src="images/logo.png"/>
+        </div>
+
+        <div class="search">
+            <form action="/sonuc.php">
+                <input autocomplete="off" maxlength="40" type="search" id="search" placeholder="&#xF002; Menu ara" name="search">
+            </form>
+        </div>
+
+        <div class="header-menu">
+
+
+            <label class="form-switch">
+                <input type="checkbox">
+                <i></i>
+            </label>
+
+            <div class="language">
+                <img src="/images/turkish.jpg">
+            </div>
+
+            <div class="button">GERİ GİT</div>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <div class="closed-tables">
+
+
+            <div class="closed-table">
+                <div class="table-title">
+                    <p class="title">Masa 20</p>
+                    <p class="date">22.05.2020</p>
+                </div>
+
+                <div class="orders">
+                    <span class="title">SİPARİŞLER</span>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order selected">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order payed">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order selected">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order selected">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                </div>
+
+                <div class="received">
+                    <span class="title">ALINAN ÖDEMELER</span>
+                    <p class="received-way">Kredi Kartı</p>
+                    <p class="received-price">40 TL</p>
+
+                    <span class="received-way">Banka Kartı</span>
+                    <span class="received-price">40 TL</span>
+                </div>
+
+                <div class="button">
+                    GERİ AL
+                </div>
+
+            </div>
+
+            <div class="closed-table">
+                <div class="table-title">
+                    <p class="title">Masa 20</p>
+                    <p class="date">22.05.2020</p>
+                </div>
+
+                <div class="orders">
+                    <span class="title">SİPARİŞLER</span>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                </div>
+
+                <div class="received">
+                    <span class="title">ALINAN ÖDEMELER</span>
+                    <p class="received-way">Kredi Kartı</p>
+                    <p class="received-price">40 TL</p>
+
+                    <span class="received-way">Banka Kartı</span>
+                    <span class="received-price">40 TL</span>
+                </div>
+
+                <div class="button">
+                    GERİ AL
+                </div>
+
+            </div>
+
+
+
+            <div class="closed-table">
+                <div class="table-title">
+                    <p class="title">Masa 20</p>
+                    <p class="date">22.05.2020</p>
+                </div>
+
+                <div class="orders">
+                    <span class="title">SİPARİŞLER</span>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                </div>
+
+                <div class="received">
+                    <span class="title">ALINAN ÖDEMELER</span>
+                    <p class="received-way">Kredi Kartı</p>
+                    <p class="received-price">40 TL</p>
+
+                    <span class="received-way">Banka Kartı</span>
+                    <span class="received-price">40 TL</span>
+                </div>
+
+                <div class="button">
+                    GERİ AL
+                </div>
+
+            </div>
+
+            <div class="closed-table">
+                <div class="table-title">
+                    <p class="title">Masa 20</p>
+                    <p class="date">22.05.2020</p>
+                </div>
+
+                <div class="orders">
+                    <span class="title">SİPARİŞLER</span>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                </div>
+
+                <div class="received">
+                    <span class="title">ALINAN ÖDEMELER</span>
+                    <p class="received-way">Kredi Kartı</p>
+                    <p class="received-price">40 TL</p>
+
+                    <span class="received-way">Banka Kartı</span>
+                    <span class="received-price">40 TL</span>
+                </div>
+
+                <div class="button">
+                    GERİ AL
+                </div>
+
+            </div>
+
+            <div class="closed-table">
+                <div class="table-title">
+                    <p class="title">Masa 20</p>
+                    <p class="date">22.05.2020</p>
+                </div>
+
+                <div class="orders">
+                    <span class="title">SİPARİŞLER</span>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order selected">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order payed">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order selected">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order selected">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                </div>
+
+                <div class="received">
+                    <span class="title">ALINAN ÖDEMELER</span>
+                    <p class="received-way">Kredi Kartı</p>
+                    <p class="received-price">40 TL</p>
+
+                    <span class="received-way">Banka Kartı</span>
+                    <span class="received-price">40 TL</span>
+                </div>
+
+                <div class="button">
+                    GERİ AL
+                </div>
+
+            </div>
+
+            <div class="closed-table">
+                <div class="table-title">
+                    <p class="title">Masa 20</p>
+                    <p class="date">22.05.2020</p>
+                </div>
+
+                <div class="orders">
+                    <span class="title">SİPARİŞLER</span>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                    <div class="order">
+                        <img src="images/logo-black.jpg" alt="">
+                        <span class="order-detail">1x Burger</span>
+                    </div>
+                </div>
+
+                <div class="received">
+                    <span class="title">ALINAN ÖDEMELER</span>
+                    <p class="received-way">Kredi Kartı</p>
+                    <p class="received-price">40 TL</p>
+
+                    <span class="received-way">Banka Kartı</span>
+                    <span class="received-price">40 TL</span>
+                </div>
+
+                <div class="button">
+                    GERİ AL
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+
+
+
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+
+</body>
+</html>

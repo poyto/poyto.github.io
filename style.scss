@@ -1,12 +1,18 @@
 $primary-bgcolor: #26272c;
 $second-bgcolor:  #131218;
 $primary-color: #ffffff;
-$light-color: #686767;
+
+$light-color: #aeadad;
+$boldlight-color: #4d4a4a;;
+
 $primary-icolor: #009946;
 
 $primary-green-t: #009946;
 $primary-red-t: #EB1C1A;
 $primary-yellow-t:#ED9B12;
+
+$red-text: #c0392b;
+$blue-text: #3f51b5;
 
 $mobile: 800px;
 $mobilek: 375px;
@@ -25,6 +31,56 @@ a {
     box-sizing: border-box;
     color: $primary-color;
 
+}
+
+h2 {
+    font-size:2.5rem;
+}
+
+h3 {
+   font-size:2rem 
+}
+
+.red-text {
+    color:$red-text;
+
+    a {
+        color: $red-text;
+    }
+}
+
+.blue-text {
+    color:$blue-text;
+
+    a {
+        color: $blue-text;
+    }
+}
+
+.light {
+    color: $light-color;
+}
+
+
+.button {
+    height:30px;
+    width: auto;
+    font-size:1.5rem;
+    padding:10px 15px;
+    background-color: red;
+    border-radius: 995px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    text-transform: uppercase;
+    margin:0px 10px;
+    
+    @media screen and (max-width: $mobile) {
+        font-size:1rem;
+    }
+
+    
 }
 
 header {
@@ -93,7 +149,8 @@ header {
         justify-content: center;
         margin-right:30px;
 
-        form-switch {
+
+        .form-switch {
             display: inline-block;
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
@@ -162,23 +219,8 @@ header {
             }
         }
 
-        .back {
-            background-color: $primary-red-t;
-            width:100px;
-            height:30px;
-            border-radius: 30px;
-            font-size:12px;
-            cursor:pointer;
-            margin-left:15px;
-            display:flex;
-            align-items: center;
-            justify-content: center;
 
-            @media screen and (max-width: $mobile) {
-            width:60px;
-            }
 
-        }
     
     }
 }
@@ -243,6 +285,12 @@ header {
             width: 50%;
             height:60px;
             margin-top:20px;
+
+            :active,
+            :checked {
+              background: #fff;
+              border-radius: 30px;
+            }
 
             @media screen and (max-width: $mobile) {
                 width:100%;
@@ -359,11 +407,10 @@ header {
     flex-wrap: wrap;
     align-content: flex-start;
 
-
-
     @media screen and (max-width: $mobile) {
         padding:10px 10px 0 15px;
     }
+
 
     .selected {
         background: rgb(27,219,56);
@@ -580,6 +627,126 @@ header {
     .yellow-t {
         background-color: $primary-yellow-t;
     }
+}
+
+.closed-tables {
+    width:100%;
+    height:auto;
+    background-color:$second-bgcolor;
+    padding:20px;
+    display:flex;
+    align-items:flex-start;
+    align-content:flex-start;
+    flex-wrap: wrap; 
+    overflow: scroll;
+    overflow-x: hidden;
+
+    @media screen and (max-width: $mobile) {
+        display:block;
+    }
+
+    .closed-table {
+        width: calc(33% - 15px);
+        background-color:$primary-bgcolor;
+        border-radius: 15px;
+        padding:20px;
+        height:auto;
+        margin-right:15px;
+        margin-bottom:30px;
+        overflow: hidden;
+        
+
+        @media screen and (max-width: $mobile) {
+            width:100%;
+            margin-bottom:20px;
+        }
+
+        > div {
+            margin-bottom:40px;
+        }
+
+        .date {
+            font-size:1.4rem;
+            margin-top:-10px;
+            display: block;
+        }
+
+        .title {
+            font-size:2rem;
+            width:100%;
+            display:block;
+            margin-bottom:10px;
+        }
+
+        .orders {
+
+            .order {
+            display:flex;
+            align-items: center;
+            padding:10px;
+            border-radius: 5px;
+            margin-bottom:3px;
+            cursor: pointer;
+
+            &:hover {
+                background-color:$second-bgcolor;
+            }
+            
+                .order-detail {
+                    font-size:1.7rem;
+                }
+
+                img {
+                    width:30px;
+                    height:30px;
+                    border-radius: 30px;
+                    margin-right:10px;
+                }
+            
+            }
+
+            .payed {
+                background-color: #c0392b;
+            }
+
+            .selected {
+                background-color: #3f51b5;
+            }
+        }    
+
+        .received {
+            width:100%;
+
+            .received-way {
+                font-size:1.8rem;
+                margin-left:20px;
+                display:inline-block;
+
+            }
+
+            .received-price {
+                font-size:2rem;
+                margin-left:20px;
+                display:block;
+                margin-bottom:15px;
+            }
+
+            
+        }
+
+        .button {
+            margin-bottom:0px;
+        }
+
+
+
+    
+
+    }
+
+
+
+
 }
 
 .right-sidebar {
@@ -1186,5 +1353,219 @@ div.none {
           
     }
 }
+
+
+.popup {
+    background-color:#fff;
+    margin: auto;
+    margin-top:30px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color:black;
+    -webkit-box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.75);
+
+    @media screen and (max-width: $mobile) {
+        width: 90%;
+    }
+}
+
+.popup-bottom {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    p,a {
+        font-size:1.7rem;
+        font-weight: bold;
+    }
+
+    :last-child {
+        margin-left:5px;
+        margin-right: 10px;
+    }
+}
+
+.popup-close {
+    color: $boldlight-color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+}
+
+.popup-order {
+    display:flex;
+    align-items: center;
+    height:50px;
+    position: relative;
+
+
+    img {
+        width:30px;
+        height:30px;
+        border-radius: 30px;
+        margin-left:10px;
+        
+    }
+
+    .order {
+        
+        align-items: center;
+        padding:10px;
+        border-radius: 5px;
+        margin-bottom:3px;
+        cursor: pointer;
+        
+        span {
+            color:$boldlight-color;
+            font-size:1.6rem;
+            display:block;
+        }
+
+    }
+
+    .options {
+        position: absolute;
+        right:0;
+        margin-right:  20px;
+
+
+        .minus, .plus {
+            font-size:3rem;
+            margin-left:15px;
+            cursor: pointer;
+            color:$boldlight-color;
+        }
+    }
+}
+
+.popup > .notes > input {
+    display:block;
+    width:100%;
+    height:50px;
+    margin-bottom:30px;
+    color:$boldlight-color;
+    font-size:2rem;
+    padding:10px;
+    border:1px solid $light-color;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.popup1 {
+
+
+    span,h2 {
+        color:$boldlight-color;
+    }
+
+
+}
+
+.popup2 {
+
+
+}
+
+.popup3 {
+
+
+
+}
+
+
+.popup4 {
+
+
+    .bottom {
+        display:flex;
+        
+        .button {
+            width:50%;
+            
+            a {
+                font-size:2rem;
+            }
+            &:first-child {
+                background-color: #c0392b;
+            }
+            &:last-child {
+                background-color:#3f51b5;
+            }
+        }
+    }
+
+
+}
+
+
+.radiobutton {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 1.6rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    user-select: none;
+    color:$boldlight-color;
+
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		&:checked {
+			~ {
+				.checkmark {
+					background-color: $second-bgcolor;
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	.checkmark {
+		&:after {
+			top: 9px;
+			left: 9px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background:#fff;
+		}
+    }
+    
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: $light-color;
+        border-radius: 50%;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+
+
+}
+
 
 
