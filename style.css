@@ -65,7 +65,9 @@ h3 {
 
 @media screen and (max-width: 800px) {
   .button {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    padding: 5px 5px;
+    height: 25px;
   }
 }
 
@@ -319,9 +321,8 @@ header .header-menu .language img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 @media screen and (max-width: 800px) {
@@ -468,6 +469,12 @@ header .header-menu .language img {
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (max-width: 800px) {
@@ -478,19 +485,18 @@ header .header-menu .language img {
 
 .menus .selected {
   background: #1bdb38;
-  background: linear-gradient(140deg, rgba(27, 219, 56, 0) 50%, #16d02d 70%);
-  z-index: 1;
-  display: block;
+  background: #1bdb38, linear-gradient(140deg, rgba(27, 219, 56, 0) 50%, #16d02d 70%);
+  z-index: 300;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(51, 255, 10, 0.38);
+          box-shadow: inset 0 0 0 1000px rgba(51, 255, 10, 0.38);
 }
 
 .menus .menubox {
-  width: 225px;
-  min-width: 225px;
+  width: calc(25% - 15px);
+  min-width: 220px;
   height: 150px;
-  -webkit-box-shadow: 0px 4px 8px #000000;
-          box-shadow: 0px 4px 8px #000000;
   border-radius: 15px;
-  margin: 0 20px 20px 0;
+  margin: 0 0px 20px 0;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,41 +508,52 @@ header .header-menu .language img {
   cursor: pointer;
   display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  background-image: url(https://cdn.yemek.com/mnresize/940/940/uploads/2017/11/karisik-pizza-yapimi-tarifi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .menus .menubox::after {
   content: "";
-  background: url(https://cdn.yemek.com/mnresize/940/940/uploads/2017/11/karisik-pizza-yapimi-tarifi.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
-  border-radius: 15px;
+  bottom: 0;
   z-index: -1;
+}
+
+@media screen and (max-width: 2500px) {
+  .menus .menubox {
+    width: calc(20% - 15px);
+  }
+}
+
+@media screen and (max-width: 2500px) {
+  .menus .menubox {
+    width: calc(25% - 15px);
+  }
 }
 
 @media screen and (max-width: 800px) {
   .menus .menubox {
-    width: 130px;
+    width: calc(25% - 5px);
     height: 100px;
-    min-width: 130px;
-    margin: 0 10px 10px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    font-size: 1rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: 10px;
+    min-width: auto;
+    margin: 0 0px 10px 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .menus .menubox {
+    width: calc(50% - 5px);
+    height: 100px;
+    min-width: auto;
+    margin: 0 0px 10px 0;
   }
 }
 
@@ -620,6 +637,12 @@ header .header-menu .language img {
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (max-width: 800px) {
@@ -629,7 +652,7 @@ header .header-menu .language img {
 }
 
 .tables .tablebox {
-  width: 200px;
+  width: calc(25% - 15px);
   min-width: 200px;
   height: 80px;
   background: #131218;
@@ -637,7 +660,7 @@ header .header-menu .language img {
           box-shadow: 0px 4px 8px #000000;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
-  margin: 0 20px 20px 0;
+  margin: 0 0px 20px 0;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,14 +670,28 @@ header .header-menu .language img {
           align-items: center;
   color: #ffffff;
   cursor: pointer;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 2500px) {
+  .tables .tablebox {
+    width: calc(20% - 15px);
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .tables .tablebox {
+    width: calc(33% - 15px);
+  }
 }
 
 @media screen and (max-width: 800px) {
   .tables .tablebox {
-    width: 85px;
+    width: calc(25% - 15px);
     height: 90px;
     min-width: 85px;
-    margin: 0 10px 10px 0;
+    margin: 0 0px 10px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -846,6 +883,155 @@ header .header-menu .language img {
   margin-bottom: 0px;
 }
 
+.prepared {
+  width: 100%;
+  height: auto;
+  background-color: #131218;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .prepared {
+    display: block;
+  }
+}
+
+.prepared .prepared-table {
+  width: calc(33% - 15px);
+  background-color: #26272c;
+  border-radius: 15px;
+  padding: 20px;
+  height: auto;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .prepared .prepared-table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.prepared .prepared-table .title {
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.prepared .prepared-table .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  position: relative;
+}
+
+.prepared .prepared-table .order img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+.prepared .prepared-table .order .detail {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.prepared .prepared-table .order .detail .order-detail {
+  color: #ffffff;
+  font-size: 1.8rem;
+  display: block;
+}
+
+.prepared .prepared-table .order .options {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.prepared .prepared-table .order .options .check-square {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.prepared .prepared-table .order .options .check-square label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  background: #fcfff4;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.prepared .prepared-table .order .options .check-square label:after {
+  content: '';
+  width: 12px;
+  height: 8px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.prepared .prepared-table .order .options .check-square label:hover::after {
+  opacity: 0.5;
+}
+
+.prepared .prepared-table .order .options .check-square input[type=checkbox] {
+  visibility: hidden;
+}
+
+.prepared .prepared-table .order .options .check-square input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.prepared .prepared-table .button {
+  margin-bottom: 0px;
+  background-color: #3f51b5;
+}
+
 .right-sidebar {
   background-color: #26272c;
   width: 100%;
@@ -902,7 +1088,7 @@ header .header-menu .language img {
   font-size: 2.1rem;
 }
 
-.right-sidebar .cart .cart-title .table-info {
+.right-sidebar .cart .cart-title .title-info {
   font-size: 1.8rem;
 }
 
@@ -959,8 +1145,8 @@ header .header-menu .language img {
 
 .right-sidebar .cart .cart-item .check-square label:after {
   content: '';
-  width: 9px;
-  height: 5px;
+  width: 12px;
+  height: 8px;
   position: absolute;
   top: 4px;
   left: 4px;
@@ -1332,7 +1518,7 @@ div.none {
   text-decoration: none;
   font-size: 2rem;
   display: block;
-  line-height: 30px;
+  line-height: 40px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: -webkit-box;
@@ -1346,7 +1532,7 @@ div.none {
 @media screen and (max-width: 800px) {
   .sidenav a {
     font-size: 1.7em;
-    height: 30px;
+    height: 40px;
   }
 }
 
