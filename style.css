@@ -7,19 +7,26 @@ a {
   margin: 0;
   padding: 0;
   font-family: "Titillium Web", sans-serif, FontAwesome;
-  font-size: 8px;
+  font-size: 16px;
   font-style: normal;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #ffffff;
+  line-height: 1.5;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.25rem;
+  margin: 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+label {
+  margin-bottom: 0;
 }
 
 .red-text {
@@ -42,10 +49,10 @@ h3 {
   color: #aeadad;
 }
 
-.button {
+.rm-button {
   height: 30px;
   width: auto;
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   padding: 10px 15px;
   background-color: red;
   border-radius: 995px;
@@ -64,11 +71,21 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
-  .button {
-    font-size: 1.3rem;
+  .rm-button {
+    font-size: 0.65rem;
     padding: 5px 5px;
     height: 25px;
   }
+}
+
+.rm-box {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0px 4px 8px #000000;
+          box-shadow: 0px 4px 8px #000000;
+  border: 1px solid #aeadad;
+  border-radius: 10px;
 }
 
 header {
@@ -141,7 +158,7 @@ header .search #search {
   width: 400px;
   height: 40px;
   padding-left: 30px;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #aeadad;
   border: none;
 }
@@ -155,7 +172,7 @@ header .search #search {
 }
 
 header .header-menu {
-  font-size: 1.3rem;
+  font-size: 0.65rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,7 +194,7 @@ header .header-menu .form-switch {
 header .header-menu .form-switch i {
   position: relative;
   display: inline-block;
-  margin-right: .5rem;
+  margin-right: 15px;
   width: 46px;
   height: 26px;
   background-color: #e6e6e6;
@@ -255,6 +272,7 @@ header .header-menu .language {
 header .header-menu .language img {
   width: 30px;
   height: 20px;
+  vertical-align: top;
 }
 
 .content {
@@ -361,23 +379,23 @@ header .header-menu .language img {
 
 .left-sidebar .boxes .box .title {
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
 @media screen and (max-width: 800px) {
   .left-sidebar .boxes .box .title {
-    font-size: 1.2rem;
+    font-size: 0.6rem;
   }
 }
 
 .left-sidebar .boxes .box .title-b {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 800px) {
   .left-sidebar .boxes .box .title-b {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -423,7 +441,7 @@ header .header-menu .language img {
   background-color: #26272c;
   -webkit-box-shadow: 0px 0px 1px #000000;
           box-shadow: 0px 0px 1px #000000;
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 33px;
   color: #ffffff;
   display: -webkit-box;
@@ -447,7 +465,7 @@ header .header-menu .language img {
     width: 80px;
     min-width: 80px;
     height: 50px;
-    font-size: 1.6rem;
+    font-size: 0.8rem;
   }
   .middle-section .tables-top .floortitle:first-child {
     margin-left: 0px;
@@ -562,24 +580,26 @@ header .header-menu .language img {
 }
 
 .menus .menubox .info .menu-name {
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #fff;
+  margin: 0;
 }
 
 @media screen and (max-width: 800px) {
   .menus .menubox .info .menu-name {
-    font-size: 1.8rem;
+    font-size: 0.9rem;
   }
 }
 
 .menus .menubox .info .menu-price {
-  font-size: 1.6rem;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media screen and (max-width: 800px) {
   .menus .menubox .info .menu-price {
-    font-size: 1.4rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -599,19 +619,19 @@ header .header-menu .language img {
 }
 
 .menus .menubox .selected-section .selected-cancel, .menus .menubox .selected-section .fas {
-  font-size: 2.6rem;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 800px) {
   .menus .menubox .selected-section .selected-cancel, .menus .menubox .selected-section .fas {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
 .menus .menubox .selected-section .selected-number {
   background-color: #fff;
   border-radius: 205px;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   color: #000;
   width: 20px;
   height: 20px;
@@ -620,7 +640,7 @@ header .header-menu .language img {
 
 @media screen and (max-width: 800px) {
   .menus .menubox .selected-section .selected-number {
-    font-size: 1.2rem;
+    font-size: 0.6rem;
     width: 15px;
     height: 15px;
   }
@@ -698,7 +718,7 @@ header .header-menu .language img {
             flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    font-size: 1rem;
+    font-size: 0.5rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -711,46 +731,49 @@ header .header-menu .language img {
 }
 
 .tables .tablebox .info .table-name {
-  font-size: 2rem;
+  font-size: 1rem;
+  margin: 0;
 }
 
 @media screen and (max-width: 800px) {
   .tables .tablebox .info .table-name {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
 }
 
 .tables .tablebox .info .table-order {
-  font-size: 1.6rem;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media screen and (max-width: 800px) {
   .tables .tablebox .info .table-order {
-    font-size: 1.3rem;
+    font-size: 0.65rem;
   }
 }
 
 .tables .tablebox .info .table-order span {
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   margin-right: 10px;
 }
 
 @media screen and (max-width: 800px) {
   .tables .tablebox .info .table-order span {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
     margin-right: 3px;
   }
 }
 
 .tables .tablebox .table-price {
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 1.15rem;
   min-width: 40px;
+  margin: 0;
 }
 
 @media screen and (max-width: 800px) {
   .tables .tablebox .table-price {
-    font-size: 1.6em;
+    font-size: 0.8rem;
   }
 }
 
@@ -814,13 +837,13 @@ header .header-menu .language img {
 }
 
 .closed-tables .closed-table .date {
-  font-size: 1.4rem;
+  font-size: 0.7rem;
   margin-top: -10px;
   display: block;
 }
 
 .closed-tables .closed-table .title {
-  font-size: 2rem;
+  font-size: 1rem;
   width: 100%;
   display: block;
   margin-bottom: 10px;
@@ -844,7 +867,7 @@ header .header-menu .language img {
 }
 
 .closed-tables .closed-table .orders .order .order-detail {
-  font-size: 1.7rem;
+  font-size: 0.85rem;
 }
 
 .closed-tables .closed-table .orders .order img {
@@ -867,13 +890,13 @@ header .header-menu .language img {
 }
 
 .closed-tables .closed-table .received .received-way {
-  font-size: 1.8rem;
+  font-size: 0.8rem;
   margin-left: 20px;
   display: inline-block;
 }
 
 .closed-tables .closed-table .received .received-price {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-left: 20px;
   display: block;
   margin-bottom: 15px;
@@ -881,6 +904,15 @@ header .header-menu .language img {
 
 .closed-tables .closed-table .button {
   margin-bottom: 0px;
+}
+
+.open-tables {
+  width: 100%;
+  height: auto;
+  background-color: #131218;
+  padding: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .prepared {
@@ -927,7 +959,7 @@ header .header-menu .language img {
 }
 
 .prepared .prepared-table .title {
-  font-size: 2rem;
+  font-size: 1rem;
   width: 100%;
   display: block;
   margin-bottom: 10px;
@@ -963,7 +995,7 @@ header .header-menu .language img {
 
 .prepared .prepared-table .order .detail .order-detail {
   color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   display: block;
 }
 
@@ -1032,6 +1064,72 @@ header .header-menu .language img {
   background-color: #3f51b5;
 }
 
+.printing {
+  width: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+  background-color: #131218;
+}
+
+.printing .rm-box {
+  margin-bottom: 40px;
+}
+
+.printing .printing-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3f51b5;
+  margin-bottom: 40px;
+}
+
+.printing .printing-info .info {
+  background-color: #324191;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  height: 80px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.printing .printing-info .info .fa-info-circle {
+  font-size: 1.25rem;
+}
+
+.printing .rm-box-printing {
+  padding: 30px;
+}
+
+.printing .rm-box-printing > h3 {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.printing .rm-box-blue {
+  background-color: #3f51b5;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.printing .rm-box-blue .fa {
+  margin-right: 10px;
+}
+
 .right-sidebar {
   background-color: #26272c;
   width: 100%;
@@ -1085,11 +1183,15 @@ header .header-menu .language img {
 }
 
 .right-sidebar .cart .cart-title .title {
-  font-size: 2.1rem;
+  font-size: 1rem;
 }
 
 .right-sidebar .cart .cart-title .title-info {
-  font-size: 1.8rem;
+  font-size: 0.9rem;
+}
+
+.right-sidebar .cart .cart-title-bold {
+  border-bottom: 3px solid #aeadad;
 }
 
 .right-sidebar .cart .cart-item {
@@ -1112,9 +1214,6 @@ header .header-menu .language img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .right-sidebar .cart .cart-item .check-square {
@@ -1183,26 +1282,28 @@ header .header-menu .language img {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .right-sidebar .cart .cart-item .extra-item .extra-item-title {
-  font-size: 1.8rem;
-  width: 200px;
+  font-size: 0.9rem;
+  width: auto;
+  min-width: 100px;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .right-sidebar .cart .cart-item .extra-item span {
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   width: auto;
 }
 
 .right-sidebar .cart .cart-item .extra-item:before {
   content: "";
   display: inline-block;
-  width: 100%;
+  width: 20px;
   height: 1px;
   background-color: #aeadad;
   margin-bottom: 5px;
@@ -1254,12 +1355,12 @@ header .header-menu .language img {
 }
 
 .right-sidebar .cart .recived .fas {
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   margin-left: 10px;
 }
 
 .right-sidebar .cart .item-title {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-left: 5px;
   width: 170px;
 }
@@ -1267,12 +1368,12 @@ header .header-menu .language img {
 @media screen and (max-width: 800px) {
   .right-sidebar .cart .item-title {
     width: 140px;
-    font-size: 1.8rem;
+    font-size: 0.9rem;
   }
 }
 
 .right-sidebar .cart .price {
-  font-size: 2rem;
+  font-size: 1rem;
   min-width: 40px;
 }
 
@@ -1293,12 +1394,13 @@ header .header-menu .language img {
 .right-sidebar .cart .number .minus, .right-sidebar .cart .number .plus {
   width: 18px;
   height: 18px;
+  cursor: pointer;
 }
 
 .right-sidebar .cart .number .number-text {
   width: 30px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .right-sidebar .payment {
@@ -1399,13 +1501,13 @@ header .header-menu .language img {
 }
 
 .right-sidebar .payment .pay *, .right-sidebar .payment .pay span {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
   .right-sidebar .payment .pay *, .right-sidebar .payment .pay span {
-    font-size: 1.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1491,7 +1593,7 @@ div.none {
 }
 
 .sidenav .sidenav-title span {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .sidenav .sidenav-cat {
@@ -1501,7 +1603,7 @@ div.none {
 }
 
 .sidenav .sidenav-cat .sidenav-cat-title {
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -1516,7 +1618,7 @@ div.none {
 .sidenav a {
   height: 40px;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1rem;
   display: block;
   line-height: 40px;
   -webkit-transition: 0.3s;
@@ -1531,7 +1633,7 @@ div.none {
 
 @media screen and (max-width: 800px) {
   .sidenav a {
-    font-size: 1.7em;
+    font-size: 0.85rem;
     height: 40px;
   }
 }
@@ -1591,21 +1693,21 @@ div.none {
 }
 
 .login-page .login-box p, .login-page .login-box span, .login-page .login-box a {
-  font-size: 2rem;
+  font-size: 1rem;
   text-decoration: none;
   color: #aeadad;
 }
 
 .login-page .login-box .heading {
   font-weight: normal;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #aeadad;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .login-page .login-box .heading .fas {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #aeadad;
   left: 0;
   position: absolute;
@@ -1634,7 +1736,7 @@ div.none {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 0.75rem;
 }
 
 .login-page .login-box button {
@@ -1692,12 +1794,12 @@ div.none {
 }
 
 .login-page .login-box .login-options .other-button p, .login-page .login-box .login-options .other-button span, .login-page .login-box .login-options .other-button a {
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   text-decoration: none;
 }
 
 .login-page .login-box .login-options .other-button i {
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   margin-right: 10px;
 }
 
@@ -1732,7 +1834,7 @@ div.none {
 }
 
 .popup-bottom p, .popup-bottom a {
-  font-size: 1.7rem;
+  font-size: 0.65rem;
   font-weight: bold;
 }
 
@@ -1784,7 +1886,7 @@ div.none {
 
 .popup-order .order span {
   color: #4d4a4a;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   display: block;
 }
 
@@ -1795,7 +1897,7 @@ div.none {
 }
 
 .popup-order .options .minus, .popup-order .options .plus {
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin-left: 15px;
   cursor: pointer;
   color: #4d4a4a;
@@ -1807,7 +1909,7 @@ div.none {
   height: 50px;
   margin-bottom: 30px;
   color: #4d4a4a;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 10px;
   border: 1px solid #aeadad;
   border-radius: 5px;
@@ -1829,7 +1931,7 @@ div.none {
 }
 
 .popup4 .bottom .button a {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .popup4 .bottom .button:first-child {
@@ -1846,7 +1948,7 @@ div.none {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
