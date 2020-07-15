@@ -1,23 +1,55 @@
 
+ :root {
+    --primary-bgcolor: #26272c;
+    --second-bgcolor: #131218;
+    --primary-color: #ffffff;
+    --light-color:#aeadad;
+    --boldlight-color: #4d4a4a;
+    --primary-icolor: #009946;
+    --primary-green-t: #009946;
+    --primary-red-t: #EB1C1A;
+    --primary-yellow-t:#ED9B12;
+    --red-text: #c0392b;
+    --blue-text: #3f51b5;
+    --blue-text-bold: #324191;
+    --logo-color:#ffffff;
+}
+
+[data-theme="light"] {
+    --primary-bgcolor:#ffffff;
+    --second-bgcolor: #f5f4f4;
+    --primary-color: #000000;
+    --light-color:#aeadad;
+    --boldlight-color: #4d4a4a;
+    --primary-icolor: #009946;
+    --primary-green-t: #009946;
+    --primary-red-t: #EB1C1A;
+    --primary-yellow-t:#ED9B12;
+    --red-text: #c0392b;
+    --blue-text: #3f51b5;
+    --blue-text-bold: #324191;
+    --logo-color:#131218;
+}
 
 
+$primary-bgcolor: var(--primary-bgcolor);
+$second-bgcolor:  var(--second-bgcolor);
+$primary-color: var(--primary-color);
 
-$primary-bgcolor: #26272c;
-$second-bgcolor:  #131218;
-$primary-color: #ffffff;
+$light-color: var(--light-color);
+$boldlight-color: var(--boldlight-color);
 
-$light-color: #aeadad;
-$boldlight-color: #4d4a4a;;
+$primary-icolor: var(--primary-icolor);
 
-$primary-icolor: #009946;
+$primary-green-t: var(--primary-green-t);
+$primary-red-t: var(--primary-red-t);
+$primary-yellow-t: var(--primary-yellow-t);
 
-$primary-green-t: #009946;
-$primary-red-t: #EB1C1A;
-$primary-yellow-t:#ED9B12;
+$red-text: var(--red-text);
+$blue-text: var(--blue-text);
+$blue-text-bold: var(--blue-text-bold);
 
-$red-text: #c0392b;
-$blue-text: #3f51b5;
-$blue-text-bold: #324191;
+$logo-color: var(--logo-color);
 
 
 $wide: 2500px;
@@ -39,19 +71,20 @@ a {
     font-size:16px;
     font-style:normal;
     box-sizing: border-box;
-    color: $primary-color;
     line-height: 1.5;
 
 }
 
-h2 {
+
+.rm-h2 {
     font-size:1.25rem;
     margin:0;
 }
 
-h3 {
+.rm-h3 {
    font-size:1rem ;
    margin:0;
+   color:$primary-color;
 }
 
 label {
@@ -91,6 +124,7 @@ label {
     cursor:pointer;
     text-transform: uppercase;
     margin:0px 10px;
+    color:#fff;
     
     @media screen and (max-width: $mobile) {
         font-size:0.65rem;
@@ -105,7 +139,7 @@ label {
     padding:10px;
     width:100%;
     height:auto;
-    box-shadow: 0px 4px 8px #000000;
+    box-shadow: 0px 4px 8px $second-bgcolor;
     border:1px solid $light-color;
     border-radius: 10px;
 
@@ -121,6 +155,13 @@ header {
 
     @media screen and (max-width: $mobile) {
         height:50px;
+    }
+
+    .rm-sidenav-bt {
+        font-size:30px;
+        cursor:pointer;
+        padding-left:10px;
+        color:$primary-color;
     }
 
     .logo {
@@ -139,11 +180,22 @@ header {
         }
 
 
-        img {
-            width: 150px;
+        .logosvg {
+            width:50px;
+            fill: $logo-color;
+        
 
             @media screen and (max-width: $mobile) {
-                width:70px;
+                width:25px;
+            }
+        }
+
+        .logotextsvg {
+            width:80px;
+            fill: $logo-color;
+
+            @media screen and (max-width: $mobile) {
+                width:40px;
             }
         }
     }
@@ -154,14 +206,14 @@ header {
         flex-grow: 1;
 
         #search {
-            background: $primary-color;
+            background: #fff;
             border-radius: 70px;
             width:400px;
             height:40px;
             padding-left: 30px;
             font-size:1rem;
             color:$light-color;
-            border: none;
+            border: 1px solid #13121885;
 
             @media screen and (max-width: $mobile) {
                 width:140px;
@@ -293,6 +345,9 @@ header {
     overflow:auto;
     overflow-x: hidden;
 
+    
+
+
 
     @media screen and (max-width: $mobile) {
         width:70px;
@@ -316,6 +371,7 @@ header {
             width: 50%;
             height:60px;
             margin-top:20px;
+            cursor:pointer;
 
             :active,
             :checked {
@@ -401,6 +457,7 @@ header {
             align-items: center;
             justify-content: center;
             padding:2px;
+            cursor:pointer;
 
             &:first-child {
                 margin-left:0px;
@@ -422,6 +479,7 @@ header {
 
         .greenbg {
             background-color:$primary-icolor;
+            color:#fff;
         }
 
     }
@@ -484,6 +542,7 @@ header {
             right: 0;
             bottom: 0;
             z-index: -1;
+            border-radius: 15px;
         
         }
 
@@ -535,8 +594,9 @@ header {
             }
 
             .menu-price {
-                font-size:0.8rem;
+                font-size:1rem;
                 margin:0;
+                color: #fff;
 
 
                 @media screen and (max-width: $mobile) {
@@ -605,14 +665,13 @@ header {
         min-width: 200px;
         height: 80px;
         background: #131218;
-        box-shadow: 0px 4px 8px #000000;
+        box-shadow: 0px 4px 8px $primary-bgcolor;
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 15px;
         margin: 0 0px 20px 0;
         padding:15px;
         display:flex;
         align-items: center;
-        color:$primary-color;
         cursor: pointer;
         justify-content: space-around;
 
@@ -648,11 +707,13 @@ header {
 
         .info {
             width:180px;
+           
           
         
             .table-name {
                 font-size:1rem;
                 margin:0;
+                color:#fff;
 
                 @media screen and (max-width: $mobile) {
                     font-size:0.75rem;
@@ -662,6 +723,7 @@ header {
             .table-order {
                 font-size:0.8rem;
                 margin:0;
+                color:#fff;
 
 
                 @media screen and (max-width: $mobile) {
@@ -671,6 +733,7 @@ header {
                 span {
                     font-size:1.25rem;
                     margin-right:10px;
+                    color:#fff;
 
                     @media screen and (max-width: $mobile) {
                         font-size:0.75rem;
@@ -688,6 +751,7 @@ header {
             font-size:1.15rem;
             min-width:40px;
             margin:0;
+            color:#fff;
 
 
             @media screen and (max-width: $mobile) {
@@ -750,6 +814,7 @@ header {
             font-size:0.7rem;
             margin-top:-10px;
             display: block;
+            color:$primary-color;
         }
 
         .title {
@@ -757,6 +822,7 @@ header {
             width:100%;
             display:block;
             margin-bottom:10px;
+            color:$primary-color;
         }
 
         .orders {
@@ -775,6 +841,7 @@ header {
             
                 .order-detail {
                     font-size:0.85rem;
+                    color:$primary-color;
                 }
 
                 img {
@@ -797,6 +864,7 @@ header {
 
         .received {
             width:100%;
+            color:$primary-color;
 
             .received-way {
                 font-size:0.8rem;
@@ -883,6 +951,7 @@ header {
             width:100%;
             display:block;
             margin-bottom:10px;
+            color:$primary-color;
         }
 
         .order {
@@ -1018,7 +1087,8 @@ header {
             margin-right:30px;
 
             .fa-info-circle {     
-            font-size:1.25rem;        
+            font-size:1.25rem;   
+            color:$primary-color;     
             }
 
         }     
@@ -1042,6 +1112,8 @@ header {
 
         .fa {
             margin-right:10px;
+            color:$primary-color;
+
         }
     }
 }
@@ -1055,6 +1127,7 @@ header {
     overflow:auto;
     overflow-x: hidden;
     position: relative;
+
 
     @media screen and (max-width: $mobile) {
         width:100%;
@@ -1087,10 +1160,12 @@ header {
     
             .title {
                 font-size: 1rem;
+                color:$primary-color;
             }
     
             .title-info {
                 font-size: 0.9rem;
+                color:$primary-color;
 
             }
         }
@@ -1177,10 +1252,12 @@ header {
                     min-width:100px;
                     margin-left:20px;
                     margin-right:20px;
+                    color:$primary-color;
                 }
                 span {
                     font-size: 0.9rem;
                     width:auto;
+                    color:$primary-color;
                 }
 
 
@@ -1213,7 +1290,7 @@ header {
             width:90%;
             margin:20px 0 20px 20px;
             border-radius:5px;
-            border:1px solid #fff;
+            border:1px solid $primary-color;
             display:flex;
             align-items: center;
             justify-content: space-between;
@@ -1241,6 +1318,7 @@ header {
             font-size: 1rem;
             margin-left:5px;
             width:170px;
+            color:$primary-color;
 
             @media screen and (max-width: $mobile) {
                 width:140px;
@@ -1251,6 +1329,7 @@ header {
         .price {
             font-size:1rem;
             min-width: 40px;
+            color:$primary-color;
         }
 
         .number {
@@ -1342,10 +1421,13 @@ header {
                 align-items: center;
                 padding:10px;
                 cursor: pointer;  
-
+                
+                > span  {
+                    color: #fff;
+                }
 
                 .total {
-                    margin-left:10px;
+                    margin-left:10px;                    
                 }
 
                 
@@ -1359,6 +1441,7 @@ header {
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                color: #fff;
 
             }
 
@@ -1426,7 +1509,7 @@ div.none {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: $second-bgcolor;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -1452,6 +1535,7 @@ div.none {
 
         span {
             font-size:1rem;
+            color:$primary-color;
         }
 
     }
@@ -1468,6 +1552,7 @@ div.none {
             width:100%;
             margin-top:20px;
             margin-bottom:10px;
+            color:$primary-color;
 
         }
 
@@ -1568,10 +1653,35 @@ div.none {
 
 
         .logo {
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
+            min-width: 200px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            @media screen and (max-width: $mobile) {
+                height: 50px;
+                width:100%;
+                min-width: 100px;
+                margin-bottom:20px;
+            }
+    
+    
+            .logosvg {
+                width:50px;
+                fill: #000;
+            
+    
+
+            }
+    
+            .logotextsvg {
+                width:80px;
+                fill: #000;
+    
+
+            }
         }
 
         input[type=text], input[type=password] {
@@ -1773,17 +1883,6 @@ div.none {
     span,h2 {
         color:$boldlight-color;
     }
-
-
-}
-
-.popup2 {
-
-
-}
-
-.popup3 {
-
 
 
 }
