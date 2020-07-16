@@ -9,8 +9,13 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
         <link href="style.css" rel=stylesheet />
+        
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="rm-script.js"></script>
+        
     </head>
 
 
@@ -37,6 +42,38 @@
         </div>
     </div>
 
+    <div id="mySidenavright" class="sidenav-right">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavright()">&times;</a>
+
+        <div class="sidenav-cat">
+            <div class="sidenav-cat-title">Light Tema</div>
+            <div class="sidenav-cat-item">
+            
+                <label class="form-switch">
+                    <input type="checkbox">
+                    <i></i>
+                </label>
+
+            </div>              
+        </div>
+
+        <div class="sidenav-cat">
+            <div class="sidenav-cat-title">Dil</div>
+            <div class="sidenav-cat-item">
+                <img class="rm-flag" src="images/turkish.jpg">
+                <img class="rm-flag" src="images/turkish.jpg">
+                <img class="rm-flag" src="images/turkish.jpg">
+            </div>              
+        </div>
+
+        <div class="sidenav-cat">
+            <div class="sidenav-cat-title">Ekstra</div>
+            <div class="sidenav-cat-item">
+                Ekstra içerik
+            </div>              
+        </div>
+
+    </div>
 
     <header>
         <span class="rm-sidenav-bt" onclick="openNav()">&#9776;</span>
@@ -61,16 +98,13 @@
 
         <div class="header-menu">
 
-
-            <label class="form-switch">
-                <input type="checkbox">
-                <i></i>
-            </label>
-
             <div class="language">
                 <img src="/images/turkish.jpg">
             </div>
 
+            <span class="rm-sidenav-bt" onclick="openNavright()">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+            </span>
             
         </div>
     </header>
