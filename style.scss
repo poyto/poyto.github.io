@@ -59,6 +59,7 @@ $desktopk:970px;
 $mobile: 800px;
 $tablet: 700px;
 $mobilew: 600px;
+$mobilem: 520px;
 $mobilek: 460px;
 
 
@@ -118,6 +119,7 @@ label {
 .rm-button {
     height:30px;
     width: auto;
+    min-width:80px;
     font-size:0.75rem;
     padding:10px 15px;
     background-color: red;
@@ -127,7 +129,7 @@ label {
     justify-content: center;
     cursor:pointer;
     text-transform: uppercase;
-    margin:0px 10px;
+    margin:0px 10px 0 0;
     color:#fff;
     
     @media screen and (max-width: $mobile) {
@@ -180,7 +182,6 @@ header {
             height: 50px;
             width:100px;
             min-width: 100px;
-            margin-right:20px;
         }
 
 
@@ -205,9 +206,9 @@ header {
     }
 
     .search {
+        width:100%;
         display: flex;
         justify-content: center;
-        flex-grow: 1;
 
         #search {
             background: #fff;
@@ -220,9 +221,18 @@ header {
             border: 1px solid #13121885;
 
             @media screen and (max-width: $mobile) {
-                width:140px;
+                width:300px;
                 height:25px;
-                display:none;
+                padding-left: 15px;
+                
+            }
+
+            @media screen and (max-width: $mobilew) {
+                width:200px;
+            }
+
+            @media screen and (max-width: $mobilek) {
+                width:120px;
             }
         }
     }
@@ -233,9 +243,10 @@ header {
         align-items: center;
         justify-content: center;
         margin-right:30px;
-        position: absolute;
-        right:0;
-
+        
+        @media screen and (max-width: $mobilek) {
+            display:none;
+        }
 
     
         .language {
@@ -626,7 +637,7 @@ header {
 
     @media screen and (max-width: $mobile) {
         padding:10px 10px 0 15px;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
     .tablebox {
@@ -656,8 +667,6 @@ header {
 
         @media screen and (max-width: $desktop) {
             width: calc(33% - 15px);
-
-
         }
 
         @media screen and (max-width: $desktopm) {
@@ -753,37 +762,16 @@ header {
 }
 
 .middle-wide {
+
     width: 100%;
 
     .menus .menubox {
         @media screen and (max-width: $wide) {
-            width: calc(20% - 15px);
+            width: calc(10% - 15px);
         }
 
         @media screen and (max-width: $desktop) {
-            width: calc(20% - 15px);
-        }
-
-        @media screen and (max-width: $desktopm) {
-            width: calc(25% - 5px);
-        }
-
-        @media screen and (max-width: $desktopk) {
-            width: calc(33% - 5px);
-        }
-
-        @media screen and (max-width: $mobilek) {
-            width: calc(50% - 5px);
-        }
-    }
-
-    .tables .tablebox {
-        @media screen and (max-width: $wide) {
-            width: calc(20% - 15px);
-        }
-
-        @media screen and (max-width: $desktop) {
-            width: calc(20% - 15px);
+            width: calc(16% - 15px);
         }
 
         @media screen and (max-width: $desktopm) {
@@ -791,11 +779,120 @@ header {
         }
 
         @media screen and (max-width: $desktopk) {
+            width: calc(25% - 5px);
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: calc(20% - 5px);
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: calc(25% - 5px);
+        }
+
+        @media screen and (max-width: $mobilem) {
+            width: calc(33% - 5px);
+        }
+
+        @media screen and (max-width: $mobilek) {
             width: calc(33% - 5px);
         }
     }
 
+    .tables .tablebox {
+        @media screen and (max-width: $wide) {
+            width: calc(10% - 15px);
+        }
+
+        @media screen and (max-width: $desktop) {
+            width: calc(16% - 15px);
+        }
+
+        @media screen and (max-width: $desktopm) {
+            width: calc(20% - 5px);
+        }
+
+        @media screen and (max-width: $desktopk) {
+            width: calc(25% - 5px);
+        }
+
+        @media screen and (max-width: $mobile) {
+            width: calc(16% - 5px);
+        }
+
+        @media screen and (max-width: $tablet) {
+            width: calc(20% - 5px);
+        }
+
+        @media screen and (max-width: $mobilem) {
+            width: calc(25% - 5px);
+        }
+
+        @media screen and (max-width: $mobilek) {
+            width: calc(33% - 5px);
+        }
+    }
+
+
 }
+
+.middle, .middle-wide {
+    @media screen and (min-width: 400px) and (max-width: 3000px) {
+        
+        .rm-wide-1 > .tablebox {
+            width:100%;
+        }
+
+        .rm-wide-2 > .tablebox {
+            width:calc(50% - 5px);
+        }
+
+        .rm-wide-3 > .tablebox {
+            width:calc(33% - 5px);
+        }
+
+        .rm-wide-4 > .tablebox {
+            width:calc(25% - 5px);
+        }
+
+        .rm-wide-5 > .tablebox {
+            width:calc(20% - 5px);
+        }
+
+        .rm-wide-6 > .tablebox {
+            width:calc(16% - 5px);
+        }
+
+        .rm-wide-7 > .tablebox {
+            width:calc(14% - 5px);
+        }
+
+        .rm-wide-8 > .tablebox {
+            width:calc(12.5% - 5px);
+        }
+
+        .rm-wide-9 > .tablebox {
+            width:calc(11% - 5px);
+        }
+
+        .rm-wide-10 > .tablebox {
+            width:calc(10% - 5px);
+        }
+
+        .rm-wide-11 > .tablebox {
+            width:calc(9% - 5px);
+        }
+
+        .rm-wide-12 > .tablebox {
+            width:calc(8% - 5px);
+        }
+        
+    }
+}
+
+
+
+
 
 .closed-tables {
     width:100%;
