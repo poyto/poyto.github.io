@@ -206,7 +206,7 @@ header {
     }
 
     .search {
-        width:100%;
+
         display: flex;
         justify-content: center;
 
@@ -219,16 +219,26 @@ header {
             font-size:1rem;
             color:$light-color;
             border: 1px solid #13121885;
+            margin-left:100px;
+
+            @media screen and (max-width: $desktopk) {
+                width:300px;
+            }
 
             @media screen and (max-width: $mobile) {
                 width:300px;
                 height:25px;
                 padding-left: 15px;
+                margin-left:0px;
                 
             }
 
             @media screen and (max-width: $mobilew) {
                 width:200px;
+            }
+
+            @media screen and (max-width: $mobilem) {
+                width:100px;
             }
 
             @media screen and (max-width: $mobilek) {
@@ -242,7 +252,8 @@ header {
         display:flex;
         align-items: center;
         justify-content: center;
-        margin-right:30px;
+        position: absolute;
+        right:20px;
         
         @media screen and (max-width: $mobilek) {
             display:none;
@@ -1554,19 +1565,18 @@ header {
         .table-search {
             float: right;
             width: 100%; 
-            height:50px;
-            display:none;
+            height:40px;
+
 
             @media screen and (max-width: $mobile) {
                 height:30px;
             }
 
                 button {
-                    width:20%;
-                    height:100%;
+                    width:25%;
+                    height:40px;
                     float: right;
                     background: #ddd;
-
                     border: none;
                     cursor: pointer;
                 }
@@ -1579,8 +1589,8 @@ header {
                     padding: 6px;
                     font-size: 17px;
                     border: none;
-                    width:80%;
-                    height:100%;
+                    width:75%;
+                    height:40px;
                 }
 
                 
