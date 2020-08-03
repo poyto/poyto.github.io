@@ -2,6 +2,7 @@
   --primary-bgcolor: #26272c;
   --second-bgcolor: #131218;
   --primary-color: #ffffff;
+  --primary-hover: #000000;
   --light-color:#aeadad;
   --boldlight-color: #4d4a4a;
   --primary-icolor: #009946;
@@ -18,6 +19,7 @@
   --primary-bgcolor:#ffffff;
   --second-bgcolor: #f5f4f4;
   --primary-color: #000000;
+  --primary-hover: #ffffff;
   --light-color:#aeadad;
   --boldlight-color: #4d4a4a;
   --primary-icolor: #009946;
@@ -1577,12 +1579,6 @@ header .header-menu .language img {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 800px) {
-  .right-sidebar .cart .extra {
-    height: 50px;
-  }
-}
-
 .right-sidebar .cart .pay-this {
   padding: 10px;
   width: 90%;
@@ -1717,6 +1713,12 @@ header .header-menu .language img {
   cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+  .right-sidebar .payment .table-search button {
+    height: 30px;
+  }
+}
+
 .right-sidebar .payment .table-search button:hover {
   background: #ccc;
 }
@@ -1727,6 +1729,12 @@ header .header-menu .language img {
   border: none;
   width: 75%;
   height: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .right-sidebar .payment .table-search input[type=text] {
+    height: 30px;
+  }
 }
 
 .right-sidebar .payment .pay {
@@ -2275,6 +2283,118 @@ div.none {
 .login-page .login-box .login-options .other-button i {
   font-size: 0.75rem;
   margin-right: 10px;
+}
+
+.secure-page {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--second-bgcolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secure-page .secure-box {
+  width: 300px;
+  height: auto;
+  background-color: var(--primary-bgcolor);
+  padding: 30px 30px 10px 30px;
+  border-radius: 10px;
+}
+
+.secure-page .secure-box .sb-password {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.secure-page .secure-box .sb-password .password-title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.secure-page .secure-box .sb-password .password-code {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--boldlight-color);
+  margin-right: 5px;
+}
+
+.secure-page .secure-box .sb-password .password-code:last-child {
+  margin-right: 0px;
+}
+
+.secure-page .secure-box .sb-password .active {
+  background-color: var(--primary-color);
+}
+
+.secure-page .secure-box .sb-numbers {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.secure-page .secure-box .sb-numbers .password-number {
+  width: 20%;
+  min-width: 50px;
+  height: 50px;
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  color: var(--primary-color);
+  padding: auto;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.secure-page .secure-box .sb-numbers .password-number:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-hover);
+}
+
+.secure-page .secure-box .sb-numbers .new-line {
+  display: block;
+  width: 100%;
+  background: red;
 }
 
 .popup {

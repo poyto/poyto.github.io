@@ -3,6 +3,7 @@
     --primary-bgcolor: #26272c;
     --second-bgcolor: #131218;
     --primary-color: #ffffff;
+    --primary-hover: #000000;
     --light-color:#aeadad;
     --boldlight-color: #4d4a4a;
     --primary-icolor: #009946;
@@ -19,6 +20,7 @@
     --primary-bgcolor:#ffffff;
     --second-bgcolor: #f5f4f4;
     --primary-color: #000000;
+    --primary-hover: #ffffff;
     --light-color:#aeadad;
     --boldlight-color: #4d4a4a;
     --primary-icolor: #009946;
@@ -35,6 +37,7 @@
 $primary-bgcolor: var(--primary-bgcolor);
 $second-bgcolor:  var(--second-bgcolor);
 $primary-color: var(--primary-color);
+$primary-hover: var(--primary-hover);
 
 $light-color: var(--light-color);
 $boldlight-color: var(--boldlight-color);
@@ -1457,9 +1460,7 @@ header {
             min-height: 80px;
             flex-wrap: wrap;
 
-            @media screen and (max-width: $mobile) {
-                height:50px;
-            }
+
         }
 
 
@@ -1579,6 +1580,10 @@ header {
                     background: #ddd;
                     border: none;
                     cursor: pointer;
+
+                    @media screen and (max-width: $mobile) {
+                        height:30px;
+                    }
                 }
 
                 button:hover {
@@ -1591,6 +1596,10 @@ header {
                     border: none;
                     width:75%;
                     height:40px;
+
+                    @media screen and (max-width: $mobile) {
+                        height:30px;
+                    }
                 }
 
                 
@@ -2116,6 +2125,93 @@ div.none {
     }
 }
 
+
+.secure-page {
+    width:100%;
+    height: 100vh;
+    background-color: $second-bgcolor;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}        
+
+.secure-page .secure-box {
+    width:300px;
+    height: auto;
+    background-color: $primary-bgcolor;
+    padding:30px 30px 10px 30px;
+    border-radius: 10px;
+
+    .sb-password {
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .password-title {
+            width:100%;
+            display:block;
+            text-align: center;
+            margin-bottom:10px;
+            color: $primary-color;
+            font-size:1rem;
+        }
+
+        .password-code {
+            width:20px;
+            height:20px;
+            border-radius:20px;
+            background-color: $boldlight-color;
+            margin-right:5px;
+
+            &:last-child {
+                margin-right:0px;
+            }
+        }
+
+        .active {
+            background-color: $primary-color;
+        }
+    }
+
+    .sb-numbers {
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top:40px;
+
+        .password-number {
+            width:20%;
+            min-width:50px;
+            height:50px;
+            border:1px solid $primary-color;
+            border-radius: 30px;
+            color:$primary-color;
+            padding:auto;
+            margin-bottom:20px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            cursor:pointer;
+            font-size:1.5rem;
+
+            &:hover {
+                background-color: $primary-color;
+                color:$primary-hover;
+            }
+        }
+
+        .new-line {
+            display:block;
+            width:100%;
+            background: red;
+          }
+    }
+    
+}
 
 .popup {
     background-color:#fff;
