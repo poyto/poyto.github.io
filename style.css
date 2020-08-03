@@ -2380,14 +2380,13 @@ div.none {
   font-size: 1.5rem;
 }
 
-.secure-page .secure-box .sb-numbers .password-number .fas {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
 .secure-page .secure-box .sb-numbers .password-number:hover {
   background-color: var(--primary-color);
   color: var(--primary-hover);
+}
+
+.secure-page .secure-box .sb-numbers .password-number .fas {
+  font-size: 1rem;
 }
 
 .secure-page .secure-box .sb-numbers .new-line {
