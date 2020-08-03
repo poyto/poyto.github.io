@@ -1409,8 +1409,7 @@ header .header-menu .language img {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: auto;
-  min-height: calc(100% - 100px);
+  height: 100%;
 }
 
 .right-sidebar .cart .cart-title {
@@ -1686,12 +1685,6 @@ header .header-menu .language img {
   position: sticky;
 }
 
-@media screen and (max-width: 800px) {
-  .right-sidebar .payment {
-    position: static;
-  }
-}
-
 .right-sidebar .payment .table-search {
   float: right;
   width: 100%;
@@ -1827,6 +1820,7 @@ header .header-menu .language img {
   height: 100%;
   border: none;
   padding: 10px;
+  cursor: pointer;
 }
 
 .right-sidebar .payment .pay-options :first-child {
@@ -2384,6 +2378,11 @@ div.none {
           justify-content: center;
   cursor: pointer;
   font-size: 1.5rem;
+}
+
+.secure-page .secure-box .sb-numbers .password-number .fas {
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 .secure-page .secure-box .sb-numbers .password-number:hover {
